@@ -10,8 +10,19 @@ body {
   color: #FEF2BF;
 }
 
-.container {
+#instructions {
   display: block;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 2rem;
+  height: 800px;
+  width: 800px;
+  margin: 200px 0 0 400px;
+  color: #FEF2BF;
+  text-align: left;
+}
+
+.container {
+  display: inline-block;
   width: 50%;
   margin: auto;
 
@@ -55,4 +66,8 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+li {
+  margin-bottom: 1rem;
 }
