@@ -93,7 +93,7 @@ function playSound(name) {
         $("body").addClass("game-over");
         setTimeout(function() {
             $("body").removeClass("game-over");
-            $("#level-title").html("Game Over <br> Press Any Key to Restart");
+            $("#level-title").html("💩Game Over!!💩 <br> Press Start");
             playSound("wrong");
         }, 200);
 
