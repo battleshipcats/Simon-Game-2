@@ -17,7 +17,7 @@
 </head>
 
 <body class>
-  <h1 id="level-title">Press Any Key to Start<br><br></h1>
+  <h1 id="level-title">Press Start!<br><br></h1>
   <div class="container">
     <div class="row">
 
@@ -43,17 +43,31 @@
 
   </div>
 
-  <div id="instructions">
-   How to play: 
-   <ol>
-<li>Press any key to start. </li>
-<li>Simon randomly selects a colored button. Now you must click that same button. Got that right? Great! </li>
-<li>Now, Simon will randomly select another colored button. You must remember and click the first button followed by the second. </li>
-<li>Simon will continue to select only one new random button in the sequence and add it to the end, while you must remember and click the entire sequence in order. </li>
-<li>Make it to 10 and you win! Hit a button wrong - game over! </li>
+  <div class="row">
 
-</ol>
+    <div type="button" id="start" class="menu">
+     <p>Start</p>  
+    </div>
+    <div type="button" id="rules" class="menu">
+      <p>Rules</p>
+    </div>
+
   </div>
+
+  <div id="instructions">
+   How to play:
+    <ol>
+      <li>Press any key to start. </li>
+      <li>Simon randomly selects a colored button. Now you must click that same button. Got that right? Great! </li>
+      <li>Now, Simon will randomly select another colored button. You must remember and click the first button followed by the second. </li>
+      <li>Simon will continue to select only one new random button in the sequence and add it to the end, while you must remember and click the entire sequence in order. </li>
+      <li>Make it to 10 and you win! Hit a button wrong - game over! </li>
+    </ol>
+  </div>
+<div type="button" id="game" class="menu">
+  <p>Game</p>
+</div>
+
   <script src="game.js" charset="utf-8"></script>
 </body>
 

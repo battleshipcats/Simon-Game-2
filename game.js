@@ -8,12 +8,31 @@ var level = (0);
 // click any key to start game.
 $(document).keypress(function() {
     if (!started) {
-    nextSequence();
-    started = true;
+        nextSequence();
+        started = true;
     };
- }); 
+}); 
 
- // trigger next sequence
+ $("#start").on("click", function() {
+    if (!started) {
+        nextSequence();
+        started = true;
+    };
+}); 
+
+$("#game").on("click", function() {
+    $('html, body').animate({
+        scrollTop: $("html").offset().top
+    }, 2000);
+}); 
+
+$("#rules").on("click", function() {
+    $('html, body').animate({
+        scrollTop: $("#instructions").offset().top
+    }, 2000);
+}); 
+
+// trigger next sequence
 function nextSequence() {
     level++;
     userClickedPattern = [];
@@ -23,7 +42,6 @@ function nextSequence() {
     gamePattern.push(randomChosenColor);
     $("#" + randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColor);
-    //console.log("Game: "+gamePattern);  //<-- this console log is for testing only.
 };
 
 // button clicks
@@ -32,8 +50,7 @@ $(".btn").on("click", function() {
     userClickedPattern.push(userChosenColor);
     animatePress(userChosenColor);  
     playSound(userChosenColor);
-    var lastUserIndex = userClickedPattern.length-1; //this will always set back to 0 after next sequence.
-    //console.log("User: "+userClickedPattern);  //<-- this console log is for testing only.
+    var lastUserIndex = userClickedPattern.length-1;
     checkAnswer(lastUserIndex);
     });
 
@@ -55,7 +72,6 @@ function playSound(name) {
 //check answer
  function checkAnswer(currentLevel) {
     if(userClickedPattern[(currentLevel)] === gamePattern[(currentLevel)]) {
-    //console.log("Success "+currentLevel);  //<-- currentlevel is for testing only
         if (currentLevel === gamePattern.length-1) {
             if (level<10) {
                 setTimeout (function() {                
@@ -90,10 +106,3 @@ function playSound(name) {
     started = false;
     level = (0);
  }
-
-//  if (level===3) {
-//     $("#level-title").text("10 out of 10! - Press Any Key to Restart");
-//     setTimeout (function() {                
-//         startOver()
-//     },1000); 
-// }

@@ -3,6 +3,10 @@ body {
   background-color: #011F3F;
 }
 
+li {
+  margin-bottom: 1rem;
+}
+
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
@@ -14,9 +18,9 @@ body {
   display: block;
   font-family: 'Titillium Web', sans-serif;
   font-size: 2rem;
-  height: 800px;
-  width: 800px;
-  margin: 200px 0 0 400px;
+  width: auto;
+  text-align: center;
+  margin: 0% 20%;
   color: #FEF2BF;
   text-align: left;
 }
@@ -36,6 +40,32 @@ body {
   border: 10px solid black;
   border-radius: 20%;
 }
+
+.menu {
+  margin: 30px 50px 200px 50px;
+  display: inline-block;
+  height: 50px;
+  width: 100px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  background-color: #011F3F;
+  border: 3px solid black;
+  border-radius: 20%;
+}
+
+.menu p {
+  vertical-align: middle;
+}
+
+.menu:hover {
+  background-color: blue;
+  color: #FEF2BF;
+}
+
+.menu:active {
+  background-color: gray;
+}
+
 
 .game-over {
   background-color: red;
@@ -66,8 +96,4 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
-}
-
-li {
-  margin-bottom: 1rem;
 }
